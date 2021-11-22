@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10pt;
+}
+
+.portfolio-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1fr 4fr 4fr; 
+  grid-template-areas:
+  "name"
+  "contact"
+  "main1"
+  "projects"
+  ;
+  grid-gap: 0px;
+}
+
+.name {
+  grid-area: name;
+  background-color: black ;
+}
+
+.name h1 {
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+.name p {
+  text-transform: uppercase;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 5px;
+  display: flex;
+  font-size: .9rem;
+  justify-content: center;
+  font-weight: 300;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: black;
+}
+
+.contact-container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+.main1 {
+  padding: 20px;
+  grid-area: main1;
+  background-image: linear-gradient(to top left, rgb(5, 18, 41) , rgb(125, 126, 134));
+}
+
+.main1 h1 {
+  margin-top: 5px;
+  color: white;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.main1 p {
+  color: white;
+  display: flex;
+  font-size: .8rem;
+  justify-content: center;
+  text-align: center;
+  font-weight: 300;
+}
+
+.main2 {
+  padding: 20px;
+  display: none;
+  grid-area: main2;
+  background-color: darkorange;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: WHITE;
+
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  flex: 1 1 calc(100% - 10px);
+  margin: 20px;
+  background: #E9D2FF;
+}
+
+.project:after{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.project2,
+.project3,
+.project4 {
+  margin-top: 0px;
+}
+
+.project1,
+.project2,
+.project3,
+.project4, h1{
+  font-weight: 900;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+  .portfolio-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 4fr 4fr; 
+    grid-template-areas:
+    "name name"
+    "contact contact"
+    "main1 main1"
+    "projects projects"
+    ;
+  }
+
+  .project {
+    margin: 20px;
+    flex: 1 1 calc(41% - 10px);
+  }
+
+  .project3,
+  .project4 {
+    margin-top: 0px;
+  }
+
+  .project2,
+  .project4 {
+    margin-left: 0px;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .portfolio-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 4fr 4fr; 
+    grid-template-areas:
+    "name name contact contact"
+    "main1 main1 main2 main2"
+    "projects projects projects projects"
+    ;
+  }
+
+  .contact-container {
+    justify-content: flex-end;
+  }
+
+  .name h1 {
+    justify-content: left;
+    margin-left: 20px;
+  }
+
+  .name p {
+    justify-content: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+
+  .main1 h1 {
+    justify-content: left;
+  }
+
+  .main1 p {
+    text-align: left;
+  }
+
+  .main2 {
+    display: unset;
+  }
+
+  .main2 h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-top: 5px;
+    display: flex;
+    justify-content: left;
+  }
+
+  .main2 p {
+    display: flex;
+    text-align: left;
+    font-size: .8rem;
+    font-weight: 300;
+  }
+
+  .project {
+    margin: 20px;
+    flex: 1 0 calc(21% - 10px);
+  }
+
+  .project2,
+  .project3,
+  .project4 {
+    margin-left: 0px;
+  }
+
+}
