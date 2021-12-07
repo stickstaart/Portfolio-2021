@@ -57,6 +57,64 @@ body {
   background-color: black;
 }
 
+.icon {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.icon:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 2px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 50%;
+}
+
+.icon:active {
+  color: #000
+}
+
+.icon:active:after {
+  background: transparent;
+}
+
+.icon:hover:before {
+  opacity: 1;
+}
+
+.icon:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
 .main1 {
   padding: 20px;
   grid-area: main1;
@@ -89,11 +147,14 @@ body {
 }
 
 .projects {
+  border: 5px solid green;
   grid-area: projects;
   background-color: WHITE;
+  
 
 }
 .projects-container {
+  border: 5px solid red;
   display: flex;
   flex-wrap: wrap;
 }
@@ -103,6 +164,17 @@ body {
   flex: 1 1 calc(100% - 10px);
   margin: 20px;
   background: #E9D2FF;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  background-image: url("images/650gr-ribs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
 }
 
 .project:after{
@@ -129,8 +201,6 @@ body {
   text-align: center;
 }
 
-
-
 @media screen and (min-width: 600px) {
 
   .portfolio-container {
@@ -149,7 +219,7 @@ body {
 
   .project {
     margin: 20px;
-    flex: 1 1 calc(41% - 10px);
+    flex: 1 0 calc(41% - 10px);
   }
 
   .project3,
@@ -171,7 +241,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 4fr 4fr; 
+    grid-template-rows: 1fr 4fr auto; 
     grid-template-areas:
     "name name contact contact"
     "main1 main1 main2 main2"
@@ -190,7 +260,7 @@ body {
 
   .name p {
     justify-content: left;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 20px;
   }
 
