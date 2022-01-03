@@ -66,6 +66,11 @@ body {
   position: relative;
   z-index: 0;
   border-radius: 50%;
+  transition: transform 500ms ease;
+}
+
+.icon:hover {
+  transform: scale(1.05);
 }
 
 .icon:before {
@@ -174,18 +179,26 @@ body {
 }
 
 .project-content {
-  border: 5px solid #48ff00;
+  display: flex;
+  flex-direction: column;
   color: white;
   position: absolute;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
+  /* width: calc(100% - 10px);
+  height: calc(100% - 10px); */
+  width: 100%;
+  height: 100%;
   text-align: center;
+  flex: 1;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1) )
 }
 
 .project:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  background-blend-mode: multiply;
-  transform: scale(1.05)
+  background-color: rgba(252, 249, 249, 0.8);
+  background-blend-mode: normal;
+  transform: scale(1.03)
 }
 
 .project:after{
@@ -197,20 +210,26 @@ body {
 .project2,
 .project3,
 .project4 {
+  
   margin-top: 0px;
 }
 
 .project-title {
+  margin-top: auto;
+  margin-bottom: 0.5rem;
   font-weight: 900;
   font-size: 2rem;
 }
 
 .project-body {
+  margin-top: 0.1rem;
+  margin-bottom: 1.1rem;
   font-weight: 300;
   font-size: 0.9rem;
 }
 
 .button {
+  margin-bottom: 1.5rem;
   font-weight: 900;
   font-size: 1rem;
   padding: 0.5em 1.25em;
@@ -218,8 +237,13 @@ body {
   background-color: darkorange;
   color: black;
   text-decoration: none;
-  width: 150px;
-  justify-content: center;
+  width: 120px;
+  align-self: center;
+}
+
+.button:hover,
+.button:focus {
+  background-color: white;
 }
 
 @media screen and (min-width: 600px) {
@@ -238,6 +262,7 @@ body {
   .project {
     margin: 20px;
     flex: 1 0 calc(41% - 10px);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .project3,
@@ -314,6 +339,8 @@ body {
   .project {
     margin: 20px;
     flex: 1 0 calc(21% - 10px);
+    background-color: rgba(0, 0, 0, 0.8);
+    
   }
 
   .project2,
