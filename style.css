@@ -36,7 +36,7 @@ body {
 
 .name p {
   text-transform: uppercase;
-  color: white;
+  color: darkorange;
   margin-top: 0;
   margin-bottom: 5px;
   display: flex;
@@ -231,7 +231,7 @@ body {
   height: 2px;
   left: 0;
   bottom: -4px;
-  background-color: #ff7300;
+  background-color: darkorange;
   width: 100%;
 }
 
@@ -305,7 +305,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 4fr auto; 
     grid-template-areas:
-    "name name contact contact"
+    "name name name contact"
     "main1 main1 main2 main2"
     "projects projects projects projects"
     ;
@@ -315,15 +315,24 @@ body {
     justify-content: flex-end;
   }
 
+.name {
+  display: flex;
+}
+
   .name h1 {
+    margin-top: 0px;
     justify-content: left;
     margin-left: 20px;
+    align-self: center;
   }
 
   .name p {
+    margin-top: 0px;
+    margin-bottom: 0px;
     justify-content: left;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-top: 67px;
+  
   }
 
   .icon {
