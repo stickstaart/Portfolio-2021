@@ -179,6 +179,10 @@ body {
   overflow: hidden;
 }
 
+.project2 {
+  background-image: url("Pac-Man/PacScreenShot.png");
+}
+
 .project-content {
   display: flex;
   flex-direction: column;
