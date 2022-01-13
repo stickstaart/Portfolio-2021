@@ -183,6 +183,14 @@ body {
   background-image: url("Pac-Man/PacScreenShot.png");
 }
 
+.project3 {
+  background-image: url("Beer-App/BeerAppSCRSHT.png");
+}
+
+.project4 {
+  background-image: url("myCharacters/myCharactersSCRSHT.png");
+}
+
 .project-content {
   display: flex;
   flex-direction: column;
