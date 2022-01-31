@@ -135,11 +135,11 @@ body {
   font-weight: 900;
 }
 
-.main1 p {
+.main1 {
   color: white;
   display: flex;
+  flex-direction: column;
   font-size: .9rem;
-  justify-content: center;
   text-align: center;
   font-weight: 300;
 }
@@ -155,7 +155,6 @@ body {
   grid-area: projects;
   background-color: WHITE;
   
-
 }
 .projects-container {
   display: flex;
@@ -344,7 +343,6 @@ body {
     justify-content: left;
     margin-left: 20px;
     margin-top: 67px;
-  
   }
 
   .icon {
